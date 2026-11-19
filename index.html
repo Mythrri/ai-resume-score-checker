@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Score Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 AI Resume Score Checker</h1>
+    <p class="subtitle">Paste your resume below - AI will give you score out of 100</p>
+
+    <label>Choose Job You Want:</label>
+    <select id="jobRole">
+      <option value="ai">AI / Data Science</option>
+      <option value="web">Web Developer</option>
+      <option value="business">Business / MBA</option>
+    </select>
+
+    <label>Paste Your Resume Text Here:</label>
+    <textarea id="resumeText" rows="12" placeholder="Paste your full resume here... Example: I am Mythrri, I know Python, I did a project on Chatbot, My LinkedIn is..."></textarea>
+
+    <button onclick="checkResume()">Check My Score 🚀</button>
+
+    <div id="result" style="display:none;">
+      <h2 id="scoreText"></h2>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <h3>✅ Found in your resume:</h3>
+      <p id="foundList"></p>
+      <h3>❌ Missing - Add these to improve:</h3>
+      <p id="missingList"></p>
+      <p id="tipText"></p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
